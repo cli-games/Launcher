@@ -1,19 +1,22 @@
 # Changelog
 
-Include information about your changes as you release 
+## V0.1.0; TBD
 
-## Version number; Date
-
-Description of release goals.
+Initial Release
 
 ### Features
 
-...
 
-### Bug fixes
 
-...
+- Implemented base class for games
+- Implemented a system for serializing gamestate
+- implemented ASCII title screen for each game
+
+
 
 ### Documentation improvements
 
-...
+
+
+- Added API documentation
+- Added User Documentation

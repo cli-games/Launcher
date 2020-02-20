@@ -18,25 +18,20 @@ def get_content(*filename):
     return content
 
 setuptools.setup(
-    name = "", # TODO: Give the package a name
-    version = "0.0.1", # I recommend every 2nd decimal release for big releases and 3rd for bug fixes.
-    author = "", # TODO: Add your name
-    author_email = "", # TODO: Add your email
-    description = "", # TODO: Give the package a description
-    long_description = get_content("README.md", "CHANGELOG.md"),
+    name = "tgp",
+    version = "0.0.1",
+    author = "Kieran Wood",
+    author_email = "kieran@canadiancoding.ca",
+    description = "A platform for building terminal games",
+    #TODO: Uncomment on first release; long_description = get_content("README.md", "CHANGELOG.md"),
+    long_description = get_content("README.md"),
     long_description_content_type = "text/markdown",
-    url = "", # TODO: Put github link if applicable
+    url = "https://github.com/cli-games/launcher",
     include_package_data = True,
     packages = setuptools.find_packages(),
-
-    # The code below is used to define entrypoints, if you don't know what this is then:
-    # SEE: https://canadiancoding.ca/posts/post/python/script-entrypoints/
-
-    
     # entry_points = { 
-    #        'console_scripts': ['... = ...']
+    #        'console_scripts': [' tgp= ...']
     #    },
-    
 
     install_requires = [
     "docopt", # Used for argument parsing
@@ -44,11 +39,12 @@ setuptools.setup(
     extras_require = {
         "dev" : ["nox",    # Used to run automated processes
                  "pytest", # Used to run the test code in the tests directory
-                 "mkdocs"],# Used to create HTML versions of the markdown docs in the docs directory
-
+                 "mkdocs", # Used to create HTML versions of the markdown docs in the docs directory
+                 "mkdocs-bootstrap386"],
     },
     classifiers = [
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
+        "Development Status :: 1 - Planning",
     ],
 )
